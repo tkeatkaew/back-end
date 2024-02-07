@@ -25,12 +25,7 @@ const init = async () => {
         port: api_port,
         host: '0.0.0.0',
         routes: {
-            //cors: true
-            "cors": {
-                "origin": ["Access-Control-Allow-Origin", "localhost:3001"],
-                "headers": ["Accept", "Content-Type"],
-                "additionalHeaders": ["X-Requested-With"]
-            }
+            cors: true
         }
 
     });
@@ -115,7 +110,8 @@ const init = async () => {
         config: {
             cors: {
                 origin: ['*'],
-                additionalHeaders: ['cache-control', 'x-requested-width']
+                additionalHeaders: ['cache-control', 'x-requested-width'],
+                credentials: true
             }
         },
         handler: async function (request, reply) {
