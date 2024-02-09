@@ -21,6 +21,7 @@ console.log('Running Environment: ' + env);
 
 const init = async () => {
 
+    
     const server = hapi.Server({
         port: api_port,
         host: '0.0.0.0',
